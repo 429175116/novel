@@ -93,7 +93,7 @@ class NovelController extends Controller
      * @return \Illuminate\Http\JsonResponse
      */
     public function freeNewNovel(Request $request) {
-        $novels = Novel::where('wether_free', 1)->orderby('id', 'desc')->limit(20)->get();
+        $novels = Novel::query()->where('wether_free', 1)->orderby('id', 'desc')->limit(20)->get();
         $data = [
             'novels' => $this->fractalItems($novels, new NovelTransformer())
         ];

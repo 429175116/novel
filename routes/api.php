@@ -48,8 +48,7 @@ $api->version('v1', [
     $api->get('/hotNovel', 'NovelController@hotNovel');
     $api->get('/authorOtherNovel/{id}', 'NovelController@authorOtherNovel');
     $api->get('/userLikeThisBookLikeOther/{id}', 'NovelController@userLikeThisBookLikeOther');
-    //$api->get('/freeNewNovel', 'NovelController@freeNewNovel');
-    $api->get('/freeNewNovel', function(){echo 123;});
+    $api->get('/freeNewNovel', 'NovelController@freeNewNovel');
     $api->get('/recommendNovel', 'NovelController@recommendNovel');
     $api->get('/novelDetail/{id}', 'NovelController@detail');
     $api->get('/chapterDetail', 'NovelController@chapterDetail');
